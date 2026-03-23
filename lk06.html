@@ -1898,74 +1898,607 @@
                 <!--/header-nav-panel-->
             </header>
             <!-- /header -->
-            <!-- page -->
+            <!--page-full-->
             <div class="page-full">
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
-                <style>
-                    .ul-menu {
-                        font-size: 1.5em;
-                        line-height: 1.15;
-                    }
-                    .ul-menu li {
-                        padding-left: 0;
-                        margin: 0;
-                    }
-                    .ul-menu li a {
-                        display: inline-block;
-                        padding: 3px 0;
-                    }
-                    .ul-menu li:before {
-                        display: none;
-                    }
-                    .ul-menu .li-sep {
-                        font-size: 0.8em;
-                        font-weight: bold;
-                        margin-top: 2em;
-                        padding-bottom: 0.6em;
-                    }
-                    .ul-menu .li-sep:first-child {
-                        margin-top: 0;
-                    }
-                </style>
-                <ul class="ul-menu">
-                    <li class="li-sep">Основные страницы</li>
-                    <li><a href="main.html">Главная</a></li>
-                    <li><a href="catalog.html">Каталог</a></li>
-                    <li><a href="card.html">Карточка товара с табами</a></li>
-                    <li><a href="cart01.html">Корзина 1</a></li>
-                    <li><a href="cart02.html">Корзина 2</a></li>
-                    <li><a href="cart03.html">Оформление заказа с переключением полей</a></li>
-                    <li><a href="reg.html">Регистрация</a></li>
+                <!--breadcrumbs-box-->
+                <div class="breadcrumbs-box">
+                    <ol class="menu">
+                        <li><a href="">Главная</a></li>
+                        <li><a href="">Личный кабинет</a></li>
+                    </ol>
+                </div>
+                <!--/breadcrumbs-box-->
 
-                    <li class="li-sep">Текстовые страницы</li>
-                    <!-- <li><a href="man.html">Производство</a></li> -->
-                    <li><a href="delivery.html">Доставка</a></li>
-                    <li><a href="pay.html">Оплата</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
+                <!--title-box-->
+                <div class="title-box title-menu-toggle">
+                    <div class="title-wrap">
+                        <h1 class="page-title-main section-title">Личный кабинет</h1>
+                    </div>
+                </div>
+                <!--/title-box-->
 
-                    <li class="li-sep">Личный кабинет</li>
-                    <li><a href="lk01.html">ЛК - Личные данные покупателя</a></li>
-                    <li><a href="lk02.html">ЛК - Ваши заказы</a></li>
-                    <li><a href="lk03.html">ЛК - Заказ №2007-113300-03887</a></li>
-                    <li><a href="lk04.html">ЛК - Избранное</a></li>
-                    <li><a href="lk05.html">ЛК - Настройки</a></li>
-                    <li><a href="lk06.html">ЛК - Данные организации</a></li>
-                    <li><a href="lk07.html">ЛК - Счета на оплату (3)</a></li>
+                <!--page-outer-wrap-->
+                <div class="page-outer-wrap section-lk">
+                    <!--page-content-wrap-->
+                    <div class="page-content-wrap">
+                        <!--lk-outer-box-->
+                        <form class="lk-outer-box">
+                            <div class="section-inner-wrap">
+                                <div class="section-title-wrap">
+                                    <div class="section-title">Контактное лицо</div>
+                                </div>
+                                <div class="section-content-wrap">
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field">
+                                                <div class="field-title">ФИО</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="Ивановский Иван Иванович"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-action-buttons">
+                                            <a
+                                                href=""
+                                                class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field field-short">
+                                                <div class="field-title">Дата рождения</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        placeholder=""
+                                                        value="11.12.2000"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-action-buttons">
+                                            <a href="" class="button-form btn-action-ico ico-date"></a>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field field-short">
+                                                <div class="field-title">Ваш телефон</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="tel"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="+7 (111) 111-11-11"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="frm-field field-buttons">
+                                                <div class="field-action-buttons">
+                                                    <a
+                                                        href=""
+                                                        class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"
+                                                    ></a>
+                                                    <a href="" class="button-form btn-action-ico ico-add"></a>
+                                                </div>
+                                            </div>
+                                            <div class="frm-field field-span-2">
+                                                <div class="frm-field-action-info">
+                                                    <a href="" class="btn">
+                                                        <div class="button-title">Подтвердить номер</div>
+                                                    </a>
+                                                    <div class="action-info">
+                                                        Подтверждая номер, вы получаете возможность отслеживать статус
+                                                        заказов
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field field-short">
+                                                <div class="field-title">Ваш email</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="email"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="mail@mail.ru"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-action-buttons">
+                                            <a
+                                                href=""
+                                                class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"
+                                            ></a>
+                                            <a href="" class="button-form btn-action-ico ico-add"></a>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="frm-row-section">
+										<div class="frm-row">
+											<div class="frm-field">
+												<div class="field-title">Город</div>
+												<div class="frm-field-input">
+													<select class="form-input" disabled required>
+														<option>Москва</option>
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+														<option>Пункт списка</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="field-action-buttons">
+											<a href="" class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"></a>
+										</div>
+									</div>
+									<div class="frm-row-section">
+										<div class="frm-row">
+											<div class="frm-field field-short">
+												<div class="field-title">Пароль</div>
+												<div class="frm-field-input">
+													<div class="frm-field-input frm-field-password">
+														<input type="password" class="form-input" disabled placeholder="" value="3333333">
+														<a href="" class="button-form btn-action-ico ico-password-toggle js-password-toggle"></a>
+													</div>
+												</div>
+											</div>
+											<div class="frm-field field-action">
+												<a href="">Изменить пароль</a>
+											</div>
+										</div>
+									</div> -->
+                                </div>
+                            </div>
 
-                    <!-- <li class="li-sep">Всплывающие окна</li>
-					<li><a href="" class="js-popup-open" data-popup="popup-callback">Popup callback</a></li> -->
-                </ul>
-                <br />
-                <br />
-                <br />
-                <br />
-                <br />
+                            <div class="section-inner-wrap">
+                                <div class="section-title-wrap">
+                                    <div class="section-title">Данные организации</div>
+                                </div>
+                                <div class="section-content-wrap">
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field">
+                                                <div class="field-title">Название</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="“ООО Ромашка”"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-action-buttons">
+                                            <a
+                                                href=""
+                                                class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field field-span-2">
+                                                <div class="field-title">Юридический статус</div>
+                                                <div class="frm-field-input">
+                                                    <select class="form-input" required>
+                                                        <option>Общество с ограниченной ответсвенностью</option>
+                                                        <option>Пункт списка</option>
+                                                        <option>Пункт списка</option>
+                                                        <option>Пункт списка</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="frm-field field-third">
+                                                <div class="field-title">ИНН</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="11111111111"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-action-buttons">
+                                            <a
+                                                href=""
+                                                class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field field-third">
+                                                <div class="field-title">КПП</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="111111111111"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="frm-field field-third">
+                                                <div class="field-title">ОГРН</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="111111111111"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="frm-field field-third">
+                                                <div class="field-title">БИК</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="11111111111"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-action-buttons">
+                                            <a
+                                                href=""
+                                                class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field">
+                                                <div class="field-title">Юридический адрес</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="Москва, Красная площадь дом 1"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-action-buttons">
+                                            <a
+                                                href=""
+                                                class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field">
+                                                <div class="field-title">Фактический адрес</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="Москва, Красная площадь дом 1"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-action-buttons">
+                                            <a
+                                                href=""
+                                                class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="section-inner-wrap">
+                                <div class="section-title-wrap">
+                                    <div class="section-title">Рассчетный счет</div>
+                                </div>
+                                <div class="section-content-wrap">
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field">
+                                                <div class="field-title">Банк</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="“ООО Зеленый банк”"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-action-buttons">
+                                            <a
+                                                href=""
+                                                class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field field-third">
+                                                <div class="field-title">БИК</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="11111111111"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="frm-field field-third">
+                                                <div class="field-title">ИНН</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="111111111111"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="frm-field field-third">
+                                                <div class="field-title">КПП</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="111111111111"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-action-buttons">
+                                            <a
+                                                href=""
+                                                class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field">
+                                                <div class="field-title">Юридический адрес</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="Москва, Красная площадь дом 1"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-action-buttons">
+                                            <a
+                                                href=""
+                                                class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field">
+                                                <div class="field-title">Фактический адрес</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="Москва, Красная площадь дом 1"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-action-buttons">
+                                            <a
+                                                href=""
+                                                class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field field-half">
+                                                <div class="field-title">Расчетный счет</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="1111111111111111111111"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="frm-field field-half">
+                                                <div class="field-title">Корреспондентский счет</div>
+                                                <div class="frm-field-input">
+                                                    <input
+                                                        type="text"
+                                                        class="form-input"
+                                                        disabled
+                                                        placeholder=""
+                                                        value="1111111111111111111111"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-action-buttons">
+                                            <a
+                                                href=""
+                                                class="button-form button-form-edit btn-action-ico ico-edit button-active-close js-form-edit"
+                                            ></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="section-inner-wrap">
+                                <div class="section-content-wrap">
+                                    <div class="frm-row-section">
+                                        <div class="frm-row">
+                                            <div class="frm-field field-short">
+                                                <div class="field-title">Пароль</div>
+                                                <div class="frm-field-input">
+                                                    <div class="frm-field-input frm-field-password">
+                                                        <input
+                                                            type="password"
+                                                            class="form-input"
+                                                            disabled
+                                                            placeholder=""
+                                                            value="3333333"
+                                                        />
+                                                        <a
+                                                            href=""
+                                                            class="button-form btn-action-ico ico-password-toggle js-password-toggle"
+                                                        ></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="frm-field field-action">
+                                                <a href="">Изменить пароль</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="frm-row-submit">
+                                <div class="frm-field">
+                                    <button type="submit" class="btn">
+                                        <div class="button-title">Сохранить изменения</div>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                        <!--/lk-outer-box-->
+                    </div>
+                    <!--/page-content-wrap-->
+
+                    <!--page-side-wrap-->
+                    <div class="page-side-wrap">
+                        <!--side-menu-box-->
+                        <div class="side-menu-box js-popup-wrap">
+                            <a
+                                href=""
+                                class="btn-popup btn-action-ico ico-menu-catalog btn button-att js-btn-popup-toggle"
+                            ></a>
+                            <div class="menu-content-block js-popup-block">
+                                <ul class="menu">
+                                    <li>
+                                        <a href="" class="btn-menu button-arrow-toggle active">
+                                            <div class="button-ico">
+                                                <img
+                                                    src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20style='mix-blend-mode:multiply'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M16%2027.0758C9.92487%2027.0758%205%2022.117%205%2016C5%209.883%209.92487%204.92419%2016%204.92419C22.0751%204.92419%2027%209.883%2027%2016C27%2022.117%2022.0751%2027.0758%2016%2027.0758ZM23.3995%2021.1599C24.4086%2019.6956%2025%2017.9173%2025%2016C25%2010.9952%2020.9706%206.93797%2016%206.93797C11.0294%206.93797%207%2010.9952%207%2016C7%2017.9173%207.59138%2019.6956%208.6005%2021.1599C9.72595%2019.6631%2012.3706%2019.0207%2016%2019.0207C19.6294%2019.0207%2022.274%2019.6631%2023.3995%2021.1599ZM21.9647%2022.7862C21.672%2021.7265%2019.5694%2021.0344%2016%2021.0344C12.4306%2021.0344%2010.328%2021.7265%2010.0353%2022.7862C11.6233%2024.2023%2013.7119%2025.062%2016%2025.062C18.2881%2025.062%2020.3767%2024.2023%2021.9647%2022.7862ZM16%209.95865C13.5791%209.95865%2012%2011.7265%2012%2013.9862C12%2017.4372%2013.7609%2019.0207%2016%2019.0207C18.2181%2019.0207%2020%2017.4898%2020%2014.1876C20%2011.8935%2018.4142%209.95865%2016%209.95865ZM14%2013.9862C14%2016.2711%2014.8182%2017.0069%2016%2017.0069C17.1777%2017.0069%2018%2016.3004%2018%2014.1876C18%2012.9294%2017.2157%2011.9724%2016%2011.9724C14.7337%2011.9724%2014%2012.7939%2014%2013.9862Z'%20fill='%230095BF'/%3e%3c/g%3e%3c/svg%3e"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="button-title">Личные данные</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="btn-menu button-arrow-toggle">
+                                            <div class="button-ico">
+                                                <img
+                                                    src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20style='mix-blend-mode:multiply'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M12.9959%205.93108C13.7482%205.28967%2014.8391%204.92419%2016%204.92419C17.1609%204.92419%2018.2518%205.28967%2019.0041%205.93108H20C21.1046%205.93108%2022%206.83268%2022%207.94486L23%207.94486C24.1046%207.94486%2025%208.84647%2025%209.95865V25.062C25%2026.1742%2024.1046%2027.0758%2023%2027.0758H9C7.89543%2027.0758%207%2026.1742%207%2025.062V9.95865C7%208.84647%207.89543%207.94486%209%207.94486L10%207.94486C10%206.83268%2010.8954%205.93108%2012%205.93108H12.9959ZM20%2010.9655C20.7403%2010.9655%2021.3866%2010.5606%2021.7324%209.95865H23V25.062H9V9.95865H10.2676C10.6134%2010.5606%2011.2597%2010.9655%2012%2010.9655H20ZM12%2020.0275V18.0138H18V20.0275H12ZM12%2013.9862V16H20V13.9862H12ZM13.8576%207.94487L14.1566%207.59787C14.4852%207.21662%2015.1894%206.93797%2016%206.93797C16.8106%206.93797%2017.5148%207.21662%2017.8434%207.59787L18.1424%207.94487H20V8.95176H12V7.94487H13.4013H13.8576Z'%20fill='%230095BF'/%3e%3c/g%3e%3c/svg%3e"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="button-title">Заказы</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="btn-menu button-arrow-toggle">
+                                            <div class="button-ico">
+                                                <img
+                                                    src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20style='mix-blend-mode:multiply'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M14%205.11652C12.9065%205.11652%2012.018%206.01502%2012.0003%207.1303H23V22.1486L25%2023.1725V7.1643C25%206.03334%2024.1046%205.11652%2023%205.11652H14ZM14%2023.3594L7%2026.8835V11.1579C7%2010.0457%207.89543%209.14408%209%209.14408H19C20.1046%209.14408%2021%2010.0457%2021%2011.1579V26.8835L14%2023.3594ZM9%2023.6251L14%2021.1079L19%2023.6251V11.1579H9V23.6251Z'%20fill='%230095BF'/%3e%3c/g%3e%3c/svg%3e"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="button-title">Избранное</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="btn-menu button-arrow-toggle">
+                                            <div class="button-ico">
+                                                <img
+                                                    src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20style='mix-blend-mode:multiply'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M19.0293%207.5097L17.5811%204.92474H14.4453L12.9902%207.50287L12.1797%207.83881L9.3418%207.04193L7.12695%209.2724L7.90723%2012.1298L7.56738%2012.9462L5%2014.4052V17.5605L7.55762%2019.0292L7.89258%2019.8466L7.10156%2022.704L9.31836%2024.9345L12.1553%2024.1484L12.9668%2024.4911L14.415%2027.0751H17.5498L19.0068%2024.4999L19.8184%2024.163L22.6562%2024.9589L24.873%2022.7265L24.0928%2019.8701L24.4326%2019.0517L27%2017.5937V14.4365L24.4404%2012.9716L24.1055%2012.1552L24.8965%209.29681L22.6777%207.06635L19.8398%207.85248L19.0293%207.5097ZM14.3896%209.09955L15.6094%206.93842H16.4131L17.624%209.10052L19.7041%209.97845L22.0869%209.3183L22.6562%209.89056L21.9941%2012.2822L22.8535%2014.3798L25%2015.6083V16.4169L22.8525%2017.6376L21.9805%2019.7343L22.6357%2022.1308L22.0674%2022.7031L19.6924%2022.037L17.6094%2022.9023L16.3877%2025.0615H15.583L14.3711%2022.9003L12.292%2022.0224L9.90918%2022.6826L9.3418%2022.1113L10.0039%2019.7187L9.14453%2017.622L7%2016.3906V15.581L9.14746%2014.3613L10.0195%2012.2665L9.36328%209.8681L9.92969%209.29779L12.3057%209.96478L14.3896%209.09955ZM20%2016.0009C20%2013.7766%2018.2091%2011.9726%2016%2011.9726C13.7909%2011.9726%2012%2013.7766%2012%2016.0009C12.0002%2018.2251%2013.791%2020.0283%2016%2020.0283C18.209%2020.0283%2019.9998%2018.2251%2020%2016.0009ZM18%2016.0005C18%2017.1127%2017.1046%2018.0143%2016%2018.0143C14.8954%2018.0143%2014%2017.1127%2014%2016.0005C14%2014.8884%2014.8954%2013.9868%2016%2013.9868C17.1046%2013.9868%2018%2014.8884%2018%2016.0005Z'%20fill='%230095BF'/%3e%3c/g%3e%3c/svg%3e"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="button-title">Настройки</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="btn-menu button-arrow-toggle">
+                                            <div class="button-ico">
+                                                <img
+                                                    src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20style='mix-blend-mode:multiply'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M11.7638%2017H22.4225L19.107%2020.2929L20.5309%2021.7071L26.2773%2016L20.5309%2010.2929L19.107%2011.7071L22.4225%2015H11.7638V17ZM7.73625%2025H16.7983V23H7.73625V9H16.7983V7H7.73625C6.62407%207%205.72247%207.89543%205.72247%209V23C5.72247%2024.1046%206.62407%2025%207.73625%2025Z'%20fill='%230095BF'/%3e%3c/g%3e%3c/svg%3e"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="button-title">Выйти из кабинета</div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" class="btn-menu button-delete">
+                                            <div class="button-ico">
+                                                <img
+                                                    src="data:image/svg+xml,%3csvg%20width='32'%20height='32'%20viewBox='0%200%2032%2032'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20style='mix-blend-mode:multiply'%3e%3cpath%20fill-rule='evenodd'%20clip-rule='evenodd'%20d='M16.0001%2017.4142L11.7072%2021.7071L10.293%2020.2929L14.5859%2016L10.293%2011.7071L11.7072%2010.2929L16.0001%2014.5858L20.293%2010.2929L21.7072%2011.7071L17.4143%2016L21.7072%2020.2929L20.293%2021.7071L16.0001%2017.4142Z'%20fill='%23FF0000'/%3e%3c/g%3e%3c/svg%3e"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="button-title">Удалить аккаунт</div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--/side-menu-box-->
+                    </div>
+                    <!--/page-side-wrap-->
+                </div>
+                <!--/page-outer-wrap-->
             </div>
-            <!-- /page -->
+            <!--/page-full-->
 
             <!-- footer -->
             <footer class="footer">

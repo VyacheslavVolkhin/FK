@@ -2791,6 +2791,41 @@ html.with-fancybox body.hide-scrollbar {
   position: relative;
   overflow: hidden;
 }
+.item-tile-order .tile-actions-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+.item-tile-order .tile-actions-wrap .tile-action-wrap {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: auto;
+}
+.item-tile-order .tile-actions-wrap .tile-action-wrap .btn {
+  width: 100%;
+  padding: 0 10px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 160%;
+  letter-spacing: 0.15em;
+}
+.item-tile-order .tile-actions-wrap .tile-action-wrap .btn .button-ico {
+  margin: 0;
+}
+.item-tile-order .tile-actions-wrap .tile-action-wrap .btn .button-title {
+  display: block;
+}
+.item-tile-order .tile-buttons-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
 .item-tile-order .tile-status-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2832,6 +2867,13 @@ html.with-fancybox body.hide-scrollbar {
   font-size: 14px;
   line-height: 135%;
   letter-spacing: 0.03em;
+}
+.item-tile-order .tile-title-wrap .tile-status-title {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.item-tile-order .tile-title-wrap .tile-title {
+  margin: 0;
 }
 .item-tile-order .tile-title-wrap a:not(:hover) {
   color: inherit;
@@ -2915,6 +2957,17 @@ html.with-fancybox body.hide-scrollbar {
   text-transform: uppercase;
   width: 100%;
   padding: 0 10px;
+}
+.item-tile-order .btn-action-ico {
+  width: 40px;
+  height: 40px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.item-tile-order .btn-action-ico:not(:hover) .button-ico,
+.item-tile-order .btn-action-ico:not(:hover):before {
+  -webkit-filter: var(--filterAttToBaseTitle);
+  filter: var(--filterAttToBaseTitle);
 }
 .item-tile-order .button-att:not(:hover) {
   color: var(--clr-base-title);
@@ -4552,6 +4605,34 @@ html.with-fancybox body.hide-scrollbar {
     gap: 15px;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+  .item-tile-order.type-small {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+  .item-tile-order.type-small .tile-actions-wrap {
+    width: 280px;
+    padding: 0 0 0 100px;
+    position: relative;
+    min-height: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .item-tile-order.type-small .tile-buttons-wrap {
+    width: 90px;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .item-tile-order.type-small .tile-buttons-wrap:first-child {
+    left: auto;
+    right: 0;
   }
   .item-tile-order .tile-status-wrap {
     width: 100%;
@@ -6944,6 +7025,9 @@ html.with-fancybox body.hide-scrollbar {
 .tiles-box .item-wrap.wrap-full {
   width: 100% !important;
 }
+.tiles-box:has(.item-tile-order.type-small) .items-wrap {
+  gap: 15px 0;
+}
 .tiles-box .sl-wrap {
   width: 344px;
   min-height: 100%;
@@ -7733,16 +7817,16 @@ html.with-fancybox body.hide-scrollbar {
   letter-spacing: 0.03em;
   color: var(--clr-base-light);
 }
-.lk-outer-box .frm-row-submin {
+.lk-outer-box .frm-row-submit {
   width: 100%;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin: 0;
 }
-.lk-outer-box .frm-row-submin .frm-field {
+.lk-outer-box .frm-row-submit .frm-field {
   margin: 0;
   padding: 0;
-  width: 100px;
+  width: 100%;
 }
 .lk-outer-box .section-inner-wrap {
   background: var(--clr-bg-gray);
@@ -8438,6 +8522,12 @@ html.with-fancybox body.hide-scrollbar {
   .lk-outer-box .frm-select label:before,
   .lk-outer-box .frm-select label:after {
     top: 0.82em;
+  }
+  .lk-outer-box .field-third {
+    width: 33.33%;
+  }
+  .lk-outer-box .field-half {
+    width: 50%;
   }
 }
 @media (min-width: 768px) {
@@ -10438,6 +10528,12 @@ select.form-input:required:invalid {
 }
 .btn-action-ico.ico-search:before {
   background-image: url(../img/icons/search.svg);
+}
+.btn-action-ico.ico-download:before {
+  background-image: url(../img/icons/download.svg);
+}
+.btn-action-ico.ico-print:before {
+  background-image: url(../img/icons/print.svg);
 }
 .btn-action-ico.ico-edit:before {
   background-image: url(../img/icons/edit.svg);
