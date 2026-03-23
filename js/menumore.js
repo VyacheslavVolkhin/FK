@@ -43,8 +43,8 @@ class ResponsiveMenu {
             item.style.display = 'block';
         });
         
-        // Используем requestAnimationFrame для первого расчета
-        requestAnimationFrame(() => this.calculateMenu());
+        // Двойной rAF гарантирует, что браузер завершил layout до первого расчёта
+        requestAnimationFrame(() => requestAnimationFrame(() => this.calculateMenu()));
         
         // Используем ResizeObserver для отслеживания изменений размера контейнера
         this.resizeObserver = new ResizeObserver(() => {
@@ -157,7 +157,12 @@ class ResponsiveMenu {
 // Инициализация меню после загрузки DOM
 window.addEventListener('load', () => {
     const menuContainer = document.querySelector('.header-nav-panel .menu-container');
-    if (menuContainer) {
-        new ResponsiveMenu(menuContainer, '.menu', '.menu-more', '.menu-more-ul');
+    if (!menuContainer) return;
+
+    const instance = new ResponsiveMenu(menuContainer, '.menu', '.menu-more', '.menu-more-ul');
+
+    // Повторный расчёт после применения web-шрифтов
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(() => instance.calculateMenu());
     }
 });
