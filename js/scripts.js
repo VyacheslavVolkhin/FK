@@ -6,6 +6,27 @@ document.addEventListener("DOMContentLoaded", function() {
 	});
 
 
+
+	//lk form edit
+	const editButtons = document.querySelectorAll('.js-form-edit');
+	editButtons.forEach(button => {
+		button.addEventListener('click', function(e) {
+			e.preventDefault(); 
+			const section = this.closest('.frm-row-section');
+			const input = section.querySelector('.form-input');
+			this.classList.toggle('active');
+			const isNowActive = input.hasAttribute('disabled');
+			if (isNowActive) {
+				input.removeAttribute('disabled');
+				input.focus();
+				input.select();
+			} else {
+				input.setAttribute('disabled', 'disabled');
+			}
+		});
+	});
+
+
 	
 
 	// item-tile-catalog height
