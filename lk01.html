@@ -1663,14 +1663,21 @@
                                     <!-- <div class="button-title">Корзина <span class="button-title-inner">2 на сумму 3000 ₽</span></div> -->
                                 </a>
                             </div>
+                            <div class="action-wrap action-reorder">
+                                <a href="" class="btn-action">
+                                    <div class="button-ico btn-action-ico ico-reorder"></div>
+                                    <div class="button-title">Повторный заказ</div>
+                                </a>
+                            </div>
                             <div class="action-wrap action-user">
-                                <div class="btn-action">
-                                    <div class="button-ico btn-action-ico ico-user"></div>
+                                <div class="btn-action button-logined">
+                                    <a href="" class="elm-photo photo-cover">
+                                        ИИ
+                                        <!-- <img src="/img/user.jpg" alt=""> -->
+                                    </a>
                                     <div class="button-title">
-                                        <a href="">Войти</a>
-                                        <span class="button-title-inner text-base-light">
-                                            <a href="">Зарегистрироваться</a>
-                                        </span>
+                                        <a href="" class="">Выйти</a>
+                                        <span class="button-title-inner"><a href="">Ивановский ИИ</a></span>
                                     </div>
                                 </div>
                             </div>
@@ -2380,5 +2387,58 @@
         <!-- /wrap -->
 
         <!-- popups (всплывающие окна) -->
+        <!--popup-outer-box-->
+        <div class="popup-outer-box" id="popup-login">
+            <div class="popup-box">
+                <a href="" class="btn-popup-close btn-action-ico ico-close js-popup-close"></a>
+                <div class="popup-title-wrap">
+                    <div class="popup-title">Вход</div>
+                </div>
+                <div class="popup-content-wrap">
+                    <form action="/" class="frm-popup">
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="field-title">Ваш email</div>
+                                <div class="frm-field-input">
+                                    <input type="email" class="form-input" placeholder="" value="mail@mail.ru" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frm-row">
+                            <div class="frm-field">
+                                <div class="field-title">Пароль</div>
+                                <div class="frm-field-input">
+                                    <div class="frm-field-input frm-field-password">
+                                        <input type="password" class="form-input" placeholder="" value="qwerty" />
+                                        <a
+                                            href=""
+                                            class="button-form btn-action-ico ico-password-toggle js-password-toggle"
+                                        ></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="frm-row-submit">
+                            <div class="frm-field field-info">
+                                <div class="frm-select">
+                                    <input type="checkbox" id="login" />
+                                    <label for="login">Запомнить пароль для входа</label>
+                                </div>
+                            </div>
+                            <div class="frm-field field-submit">
+                                <button type="submit" class="btn">
+                                    <div class="button-title">Войти в аккаунт</div>
+                                </button>
+                            </div>
+                            <div class="frm-field field-actions">
+                                <a href="">Напомнить</a>
+                                <a href="" class="link-second">Забыли пароль?</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--/popup-outer-box-->
     </body>
 </html>
