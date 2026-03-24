@@ -608,6 +608,138 @@ document.addEventListener("DOMContentLoaded", function() {
 	// });
 
 
+
+	//slider pagination mobile row
+	function setupAdaptivePagination(swiperInstance, paginationEl) {
+		const isMobile = () => window.innerWidth <= 1023;
+		
+		// Функция рендеринга кастомной пагинации
+		const renderCustomPagination = function(swiper, current, total) {
+			let visibleNumbers = [];
+			const maxVisible = 5;
+			
+			if (total <= maxVisible) {
+				for (let i = 1; i <= total; i++) {
+					visibleNumbers.push(i);
+				}
+			} else {
+				let start = current - Math.floor(maxVisible / 2);
+				let end = current + Math.floor(maxVisible / 2);
+				
+				if (start < 1) {
+					start = 1;
+					end = maxVisible;
+				} else if (end > total) {
+					end = total;
+					start = total - maxVisible + 1;
+				}
+				
+				for (let i = start; i <= end; i++) {
+					visibleNumbers.push(i);
+				}
+			}
+			
+			let html = '';
+			visibleNumbers.forEach(number => {
+				const isActive = number === current;
+				html += `<span class="swiper-pagination-bullet ${isActive ? 'swiper-pagination-bullet-active' : ''}" data-index="${number - 1}">${number}</span>`;
+			});
+			
+			return html;
+		};
+		
+		// Настройка пагинации в зависимости от ширины экрана
+		const updatePagination = () => {
+			if (!swiperInstance || !paginationEl) return;
+			
+			if (isMobile()) {
+				swiperInstance.params.pagination.type = 'custom';
+				swiperInstance.params.pagination.renderCustom = renderCustomPagination;
+			} else {
+				swiperInstance.params.pagination.type = 'bullets';
+				swiperInstance.params.pagination.renderCustom = undefined;
+			}
+			
+			// Обновляем пагинацию
+			if (swiperInstance.pagination) {
+				swiperInstance.pagination.destroy();
+				swiperInstance.pagination.init();
+				swiperInstance.pagination.render();
+				swiperInstance.pagination.update();
+			}
+			
+			// Добавляем обработчики для кастомной пагинации
+			if (isMobile() && paginationEl) {
+				setTimeout(() => {
+					const bullets = paginationEl.querySelectorAll('.swiper-pagination-bullet');
+					bullets.forEach(bullet => {
+						bullet.removeEventListener('click', () => {});
+						bullet.addEventListener('click', (e) => {
+							const index = parseInt(bullet.dataset.index);
+							if (!isNaN(index) && swiperInstance) {
+								swiperInstance.slideTo(index);
+							}
+						});
+					});
+				}, 0);
+			}
+		};
+		
+		// Инициализируем
+		updatePagination();
+		
+		// Слушаем изменение размера окна
+		let resizeTimer;
+		const handleResize = () => {
+			clearTimeout(resizeTimer);
+			resizeTimer = setTimeout(updatePagination, 250);
+		};
+		window.addEventListener('resize', handleResize);
+		
+		// Добавляем обработчики событий Swiper
+		if (swiperInstance) {
+			swiperInstance.on('init', () => {
+				if (isMobile() && paginationEl) {
+					setTimeout(() => {
+						const bullets = paginationEl.querySelectorAll('.swiper-pagination-bullet');
+						bullets.forEach(bullet => {
+							bullet.addEventListener('click', (e) => {
+								const index = parseInt(bullet.dataset.index);
+								if (!isNaN(index) && swiperInstance) {
+									swiperInstance.slideTo(index);
+								}
+							});
+						});
+					}, 0);
+				}
+			});
+			
+			swiperInstance.on('slideChange', () => {
+				if (isMobile() && paginationEl) {
+					setTimeout(() => {
+						const bullets = paginationEl.querySelectorAll('.swiper-pagination-bullet');
+						bullets.forEach(bullet => {
+							bullet.removeEventListener('click', () => {});
+							bullet.addEventListener('click', (e) => {
+								const index = parseInt(bullet.dataset.index);
+								if (!isNaN(index) && swiperInstance) {
+									swiperInstance.slideTo(index);
+								}
+							});
+						});
+					}, 0);
+				}
+			});
+		}
+		
+		// Возвращаем функцию для очистки слушателей (опционально)
+		return () => {
+			window.removeEventListener('resize', handleResize);
+			if (resizeTimer) clearTimeout(resizeTimer);
+		};
+	}
+
+
 	//slider main action
 	const slidersmainaction = document.querySelectorAll(".slider-mainaction");
 	
@@ -648,7 +780,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 		if (!swiperEl) return;
 	
-		new Swiper(swiperEl, {
+		const swiper = new Swiper(swiperEl, {
 			loop: false,
 			slidesPerGroup: 1,
 			slidesPerView: 'auto',
@@ -656,6 +788,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			autoHeight: false,
 			speed: 400,
 			centeredSlides: true,
+			initialSlide: 2,
 			pagination: {
 				el: paginationEl,
 				clickable: true,
@@ -666,6 +799,9 @@ document.addEventListener("DOMContentLoaded", function() {
 				prevEl: prevEl,
 			},
 		});
+		if (swiper && paginationEl) {
+			setupAdaptivePagination(swiper, paginationEl);
+		}
 	});
 
 
@@ -682,7 +818,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		const hasAutoHeight = container.dataset.height === "auto";
 		const hasLoop = container.dataset.loop === "true";
 	
-		new Swiper(swiperEl, {
+		const swiper = new Swiper(swiperEl, {
 			loop: hasLoop,
 			slidesPerGroup: 1,
 			slidesPerView: 'auto',
@@ -699,6 +835,9 @@ document.addEventListener("DOMContentLoaded", function() {
 				prevEl: prevEl,
 			},
 		});
+		if (swiper && paginationEl) {
+			setupAdaptivePagination(swiper, paginationEl);
+		}
 	});
 
 

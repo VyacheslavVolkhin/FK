@@ -7428,6 +7428,9 @@ html.with-fancybox body.hide-scrollbar {
 .main-lead-box .tiles-actions-slider-box {
   margin-bottom: 0;
 }
+.main-lead-box .slider-pagination .swiper-pagination-bullet {
+  z-index: 15;
+}
 .middle-lead-box {
   position: relative;
   margin-bottom: var(--sectionMargin);
@@ -7529,6 +7532,10 @@ html.with-fancybox body.hide-scrollbar {
 }
 .tiles-box .slider-wrap {
   overflow: visible;
+}
+.tiles-box .slider-inner-wrap {
+  position: relative;
+  z-index: 2;
 }
 .tiles-box .slider-inner-wrap:has(.item-tile-info) .sl-wrap {
   width: 320px;
@@ -9653,8 +9660,46 @@ html.with-fancybox body.hide-scrollbar {
     flex: 1;
     max-width: calc(100% - 330px - 30px);
   }
+  .middle-lead-box .tiles-slider-inner-wrap .slider-inner-wrap:has(.item-tile-catalog) .slider-wrap {
+    overflow: visible;
+  }
+  .middle-lead-box .tiles-slider-inner-wrap .slider-inner-wrap:has(.item-tile-catalog) .sl-wrap {
+    opacity: 0;
+    pointer-events: none;
+    -webkit-transition: all ease 0.2s;
+    transition: all ease 0.2s;
+  }
+  .middle-lead-box .tiles-slider-inner-wrap .slider-inner-wrap:has(.item-tile-catalog) .sl-wrap.swiper-slide-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .middle-lead-box
+    .tiles-slider-inner-wrap
+    .slider-inner-wrap:has(.item-tile-catalog)
+    .sl-wrap.swiper-slide-active
+    + .sl-wrap {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .middle-lead-box
+    .tiles-slider-inner-wrap
+    .slider-inner-wrap:has(.item-tile-catalog)
+    .sl-wrap.swiper-slide-active
+    + .sl-wrap
+    + .sl-wrap,
+  .middle-lead-box
+    .tiles-slider-inner-wrap
+    .slider-inner-wrap:has(.item-tile-catalog)
+    .sl-wrap.swiper-slide-active
+    + .sl-wrap
+    + .sl-wrap
+    + .sl-wrap {
+    opacity: 0;
+    pointer-events: none;
+  }
   .middle-lead-box .tiles-slider-inner-wrap .slider-inner-wrap {
     padding-right: 84px;
+    position: relative;
   }
   .middle-lead-box .tiles-slider-inner-wrap .slider-actions-wrap {
     width: 69px;
@@ -13293,7 +13338,8 @@ input.form-clear-autofill::-webkit-contacts-auto-fill-button {
   margin: 0 !important;
   -ms-flex-negative: 0;
   flex-shrink: 0;
-  z-index: 15;
+  font-size: 0;
+  text-indent: -999px;
 }
 .slider-pagination .swiper-pagination-bullet:hover,
 .slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -13826,7 +13872,7 @@ body.popup-open {
   max-width: 100%;
   max-height: inherit;
   background-color: var(--clr-bg-white);
-  padding: 50px 60px 40px 50px;
+  padding: 50px 60px 40px 60px;
   border-radius: 20px;
   -webkit-box-shadow:
     0 15px 70px 0 rgba(0, 0, 0, 0.05),
